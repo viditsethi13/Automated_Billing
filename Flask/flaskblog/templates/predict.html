@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{%if error %}
+<br>
+<div class="alert alert-warning" role="alert">
+  {{error}}
+</div>
+{%endif%}
+<br>
+<br>
+        <div class="row">
+	        <div class="col-md-8">
+		      	<div class="col-md-7" >
+		          <div class="small-section">
+		          	<div class="article-metadata">
+		            	<h5 align="center">To Do</h5>
+		        	</div>
+		             <p>Click on Calculate button to calculate Price</p>
+		          </div>
+		        </div> 	         
+	        </div>
+	        <div class="col-md-4" >
+	          <div class="small-section">
+	          	<div class="article-metadata">
+	            	<h3 align="center">Invoice</h3>
+	            </div>
+	              <legend >{{ fruit }}</legend>
+	              <p>
+	                <label>Quantity</label>
+	                
+	              </p>
+	              <FORM name ="ff" action=/cost method='POST'>
+	              	<p><input type = "text" name= quantity></p>
+	              	<button type="submit" ><b>Cost</b></button>
+	              	<input type="hidden" name="product" value={{fruit}} >
+	              </FORM>
+	              <p>
+	                <label>Amount</label>
+	                <input type = "text" id = "Total">
+	              </p>
+	          </div>
+	        </div>
+        </div>
+        
+		<script>
+		function sync()
+		{
+		  n2.value = n1.value;
+		}
+		</script>
+
+{% endblock content %}

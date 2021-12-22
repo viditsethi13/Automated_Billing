@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{%if error %}
+<br>
+<div class="alert alert-warning" role="alert">
+  {{error}}
+</div>
+{%endif%}
+
+<FORM action="/capture" method='POST' >
+	<button name=capture > <B> Capture </B></button>
+</FORM>
+<br>
+        <div class="row">
+	        <div class="col-md-8">
+		      	<div class="col-md-7" >
+		          <div class="small-section">
+		          	<div class="article-metadata">
+		            	<h5 align="center">To Do</h5>
+		        	</div>
+		             <p>Click on Capture button to take Image</p>
+		          </div>
+		        </div> 	         
+	        </div>
+	        <div class="col-md-4" >
+	          <div class="small-section">
+	          	<div class="article-metadata">
+	            	<h3 align="center">Invoice</h3>
+	            </div>
+	              <legend>Item Name</legend>
+	                        
+	              
+	          </div>
+	        </div>
+        </div>
+{% endblock content %}
